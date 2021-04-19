@@ -1,0 +1,30 @@
+@import "config";
+
+.__SearchBar {
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  border-radius: 10px;
+
+  &__icon {
+    font-size: 24px;
+    display: block;
+    fill: #fff;
+  }
+
+  &__input {
+    display: block;
+    flex-grow: 1;
+    background: none;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-family: inherit;
+
+    &::placeholder {
+      color: #ffffffc5;
+      font-weight: 400;
+      font-family: $sans-serif;
+    }
+  }
+}

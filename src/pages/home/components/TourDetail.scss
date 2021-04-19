@@ -1,0 +1,136 @@
+@import "config";
+
+.__TourDetail {
+  flex-grow: 1;
+  max-width: 50rem;
+  position: relative;
+
+  &__img {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: -998;
+
+    &.go-out {
+      img {
+        transform: scale(10);
+      }
+    }
+
+    img {
+      transition: 400ms;
+      object-fit: cover;
+      object-position: bottom;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  > * {
+    overflow: hidden;
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .go-down {
+    transform: translateY(101%);
+    opacity: 0;
+  }
+
+  span {
+    display: block;
+    transition: 300ms;
+  }
+
+  &__period {
+    line-height: 1;
+    font-family: $sans-serif;
+    font-size: 100%;
+    opacity: 0.8;
+  }
+
+  &__Title {
+    font-size: 200%;
+    line-height: 1;
+    font-weight: 300;
+
+    > h1 {
+      overflow: hidden;
+      line-height: 1;
+
+      &:not(:last-child) {
+        margin-bottom: 0.8rem;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-weight: 600;
+
+    > * {
+      padding: 10px 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      position: relative;
+      z-index: 2;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 100%;
+        border-radius: 0;
+        border-top-left-radius: inherit;
+        border-bottom-left-radius: inherit;
+
+        background-color: #fff;
+        top: 0;
+        left: 0;
+        transition: 300ms;
+        z-index: -1;
+      }
+
+      &:hover {
+        &::after {
+          width: 100%;
+          border-radius: inherit;
+          z-index: -1;
+        }
+
+        backdrop-filter: none;
+        color: $color-dark-blue;
+
+        svg {
+          fill: $color-dark-blue;
+        }
+      }
+
+      &.primary {
+        background-color: #fff;
+        backdrop-filter: none;
+        color: $color-dark-blue;
+
+        &::after {
+          content: none;
+        }
+
+        svg {
+          fill: $color-dark-blue;
+        }
+      }
+
+      svg {
+        height: 1rem;
+        fill: #fff;
+      }
+    }
+  }
+}

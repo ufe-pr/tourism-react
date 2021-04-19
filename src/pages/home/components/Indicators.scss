@@ -1,0 +1,13 @@
+.__Indicator {
+  $size: 2.5rem;
+  margin: 0.5rem 0;
+  width: $size;
+  height: $size;
+  border-radius: $size / 2;
+  border: 1px solid #fff;
+  transition: 300ms;
+
+  &.active {
+    background-color: #fff;
+  }
+}

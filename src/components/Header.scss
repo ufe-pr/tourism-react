@@ -1,0 +1,25 @@
+.__Header {
+  $gap: 1.5rem;
+  $nav-item-padding: 0.8rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 1rem 2rem;
+  gap: $gap + $nav-item-padding * 2;
+
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      gap: $gap;
+
+      a {
+        padding: $nav-item-padding;
+      }
+    }
+  }
+
+  .__SearchBar {
+    flex-grow: 1;
+  }
+}

@@ -1,0 +1,30 @@
+@import "config";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.6;
+  overflow-x: hidden;
+  font-family: $sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $serif;
+  font-weight: 400;
+}

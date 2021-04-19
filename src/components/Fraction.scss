@@ -1,0 +1,29 @@
+@import "config";
+
+.__Fraction {
+  line-height: 1;
+  font-family: $serif;
+  > * {
+    display: inline-block;
+  }
+  &__top {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -2px;
+      height: 200%;
+      width: 2px;
+      transform: rotateZ(60deg);
+      background-color: white;
+    }
+  }
+
+  &__bottom {
+    position: relative;
+    top: 1em;
+    margin-bottom: 1em;
+    opacity: 0.5;
+  }
+}

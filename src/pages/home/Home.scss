@@ -1,0 +1,23 @@
+.__Home {
+  width: 100vw;
+  height: 100vh;
+  // background-image: url("/assets/images/food.jpg");
+  background-size: cover;
+  display: flex;
+  // gap: 3rem;
+
+  &__sidebar {
+    padding: 1.6rem 2rem;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  > main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+}
